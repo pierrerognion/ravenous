@@ -1,6 +1,7 @@
 import React from 'react';
 import './Business.css';
 
+// Fake data before plugging the Yelp API
 const business = {
     imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
     name: 'MarginOtto Pizzeria',
@@ -13,6 +14,7 @@ const business = {
     reviewCount: 90
 }
 
+// Component and field mapping
 class Business extends React.Component {
     render() {
         return (
