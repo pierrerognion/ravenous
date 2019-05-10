@@ -21,21 +21,11 @@ import './Business.css';
 // location ==> address1, 2, 3, city, zip_code, country, state ... or display_address
 // phone (or display_phone)
 
-const business = {
-    imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Flavortown',
-    state: 'NY',
-    zipCode: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90
-}
-
 // Component and field mapping
 class Business extends React.Component {
+    
     render() {
+        const { business } = this.props;
         return (
         <div className="Business">
         <div className="image-container">
