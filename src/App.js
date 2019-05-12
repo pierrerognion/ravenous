@@ -26,7 +26,7 @@ class App extends Component {
         <SearchBar />
         <BusinessList businesses={businesses}/> 
       </div>
-    );
+    )
   }
 }
 
