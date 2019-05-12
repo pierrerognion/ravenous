@@ -14,9 +14,16 @@ const business = {
   category: 'Italian',
   rating: 4.5,
   reviewCount: 90
-}
+};
 
-const businesses = [business, business, business, business, business, business]
+const businesses = [
+  business, 
+  business, 
+  business, 
+  business, 
+  business, 
+  business
+];
 
 class App extends Component {
 
@@ -28,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>ravenous</h1>
-        <SearchBar />
+        <SearchBar searchYelp={this.searchYelp} />
         <BusinessList businesses={businesses}/> 
       </div>
     )
