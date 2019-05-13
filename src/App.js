@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 //import logo from './logo.svg';
 import "./App.css";
 import BusinessList from "./components/BusinessList/BusinessList";
@@ -27,7 +27,7 @@ import Yelp from "../src/util/Yelp";
 //  business
 //];
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,7 +38,7 @@ class App extends Component {
   }
 
   searchYelp(term, location, sortBy) {
-    Yelp.searchYelp(term, location, sortBy).then(businesses => {
+    Yelp.searchYelp(term, location, sortBy).then((businesses) => {
       this.setState({ businesses: businesses });
     });
   }
