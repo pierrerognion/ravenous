@@ -1,26 +1,6 @@
 import React from 'react';
 import './Business.css';
 
-// Fake data before plugging the Yelp API
-// API Info: https://www.yelp.com/developers/documentation/v3/business_search
-// GET Request: GET https://api.yelp.com/v3/businesses/search
-// 
-// API DATA FOR BUSINESSES
-// id
-// alias
-// name
-// image_url
-// is_closed
-// url
-// review_count
-// categories ==> reference alias (pizza), title (Pizza)
-// rating
-// coordinates ==> latitude, longitude
-// transactions ============> ??
-// price
-// location ==> address1, 2, 3, city, zip_code, country, state ... or display_address
-// phone (or display_phone)
-
 // Component and field mapping
 class Business extends React.Component {
     
