@@ -16,6 +16,7 @@ class SearchBar extends React.Component {
         this.handleTermChange = this.handleTermChange.bind(this);
         this.handleLocationChange = this.handleLocationChange.bind(this);
         this.handleSearch = this.handleSearch.bind(this);
+        this.handleSortByChange = this.handleSortByChange.bind(this);
 
         this.sortByOptions = {
             'Best Match': 'best_match' ,
@@ -52,7 +53,10 @@ class SearchBar extends React.Component {
     }
 
     handleSearch(event) {
-        this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
+        this.props.searchYelp(
+            this.state.term, 
+            this.state.location, 
+            this.state.sortBy);
     
         event.preventDefault();
       }
@@ -69,7 +73,7 @@ class SearchBar extends React.Component {
     }
     render() {
         return (
-            <div className="SearchBar" searchYelp={this.searchYelp}>
+            <div className="SearchBar">
             <div className="SearchBar-sort-options">
                 <ul>
                 {this.renderSortByOptions()}
