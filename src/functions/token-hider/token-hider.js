@@ -5,15 +5,11 @@ exports.handler = function(event, context, callback) {
   // apply our function to the queryStringParameters and assign it to a variable
   const API_PARAMS = qs.stringify(event.queryStringParameters);
   // Get env var values defined in our Netlify site UI
-  const { API_TOKEN, API_URL } = process.env;
+  const { REACT_APP_YELP_API_KEY, REACT_APP_YELP_CLIENT_ID } = process.env;
   // In this example, the API Key needs to be passed in the params with a key of key.
   // We're assuming that the ApiParams var will contain the initial ?
-  const URL = `${API_URL}?${API_PARAMS}&key=${API_TOKEN}`;
-
-  // Let's log some stuff we already have.
-  console.log("Injecting token to", API_URL);
-  console.log("logging event.....", event);
-  console.log("Constructed URL is ...", URL);
+  const ApiKey = `${REACT_APP_YELP_API_KEY}`;
+  const ClientId = `${REACT_APP_YELP_CLIENT_ID}`
 
   // Here's a function we'll use to define how our response will look like when we call callback
   const pass = body => {
